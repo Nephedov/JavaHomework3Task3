@@ -1,23 +1,23 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main (String [] args) {
+    public static void main(String[] args) {
 
-        Scanner sum = new Scanner(System.in);
+        Scanner sum1 = new Scanner(System.in);
         System.out.println("Введите сумму кредита в рублях: ");
-        double s = sum.nextDouble();            // ввод суммы кредита
+        double sum = sum1.nextDouble();            // ввод суммы кредита
 
-        Scanner time = new Scanner(System.in);
+        Scanner time1 = new Scanner(System.in);
         System.out.println("Введите срок кредита в годах: ");
-        double t = time.nextDouble();          // ввод срока кредита.
+        double time = time1.nextDouble();          // ввод срока кредита.
 
-        Scanner prcent = new Scanner(System.in);
+        Scanner prcent1 = new Scanner(System.in);
         System.out.println("Введите процент годовых: ");
-        double p = prcent.nextDouble();        // При вводе дробного числа, используйте запятую, а не точку.
+        double prcent = prcent1.nextDouble();      // При вводе дробного числа, используйте запятую, а не точку.
 
         CalcCredit num = new CalcCredit();
-        int r = num.calc(s, t, p);
+        int payment = num.calc(sum, time, prcent);
 
-        System.out.println("Ваш ежемесячный платеж составит примерно: " + r + " рублей.");
+        System.out.println("Ваш ежемесячный платеж составит примерно: " + payment + " рублей.");
     }
 }
